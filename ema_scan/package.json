@@ -1,0 +1,30 @@
+{
+  "name": "ema-scanner-bot",
+  "version": "1.0.0",
+  "description": "加密貨幣EMA趨勢掃描器 - 支持4h/12h/1d時間框架",
+  "main": "ema-scanner.js",
+  "scripts": {
+    "start": "node ema-scanner.js",
+    "scan:4h": "node -e \"require('./ema-scanner').scanAndRank('4h', 10)\",
+    "scan:12h": "node -e \"require('./ema-scanner').scanAndRank('12h', 10)\",
+    "scan:1d": "node -e \"require('./ema-scanner').scanAndRank('1d', 10)\"
+  },
+  "keywords": [
+    "crypto",
+    "scanner",
+    "ema",
+    "binance",
+    "telegram",
+    "trading"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "telegram": "^3.15.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
